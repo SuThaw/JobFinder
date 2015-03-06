@@ -1,0 +1,13 @@
+html
+	head
+		meta(charset="UTF-8")
+		link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.css")
+		script(src="/bower_components/angular/angular.js")
+		script(src="/app/app.js")
+	body(ng-app="app")
+		div.container
+			div(ng-controller="testCtrl")
+				div.list-group
+					a.list-group-item(href='#')(ng-repeat="job in jobs")
+						h4.list-group-item-heading {{job.title}}
+						p.list-group-item-text {{job.description}}
